@@ -38,7 +38,7 @@ O design é moderno e responsivo, com interatividade através de efeitos visuais
     cd ag-14
     ```
 
-Abra o arquivo `index.html` em um navegador para visualizar a aplicação ou acesse `(LINK)`.
+Abra o arquivo `index.html` em um navegador para visualizar a aplicação ou acesse `(https://samueloliveiramatias.github.io/Ag-14/)`.
 
 ## Conclusão
 **Agenda 14** é uma aplicação web focada em proporcionar uma experiência visual agradável e interativa para quem deseja conhecer os eventos e atrativos turísticos de Praia Grande. Utilizando uma combinação de HTML, CSS, SCSS, Bootstrap e JavaScript, conseguimos criar um design dinâmico e responsivo, capaz de se adaptar a diferentes dispositivos e oferecer uma navegação fluída.
