@@ -1,0 +1,147 @@
+@import 'variables.scss';
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 916px;
+    width: calc(100% - 20px);
+
+    &:hover>.card::after {
+        opacity: 1;
+    }
+}
+
+.card {
+    background-color: $fourth;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &::before,
+    &::after {
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+    }
+
+    &::before {
+        background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), $fifth, transparent 40%);
+        z-index: 3;
+    }
+
+    &::after {
+        background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), $sixth, transparent 40%);
+        z-index: 1;
+    }
+
+    >.card-content {
+        background-color: var(--card-color);
+        border-radius: inherit;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        inset: 1px;
+        padding: 10px;
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+/* CARD CONTENT STYLES */
+
+h1,
+h2,
+h3,
+h4,
+span {
+    color: $seventh;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+
+i {
+    color: $seventh;
+}
+
+.card-image {
+    align-items: center;
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    overflow: hidden;
+
+    >img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        opacity: 0.25;
+        margin: 0 auto;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.card-info-wrapper {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-info {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+
+    >i {
+        font-size: 1em;
+        height: 20px;
+        line-height: 20px;
+    }
+}
+
+.card-info-title> {
+    h3 {
+        font-size: 1.1em;
+        line-height: 20px;
+    }
+
+    h4 {
+        color: $eighth;
+        font-size: 0.85em;
+        margin-top: 8px;
+    }
+}
+
+.figure>img {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
